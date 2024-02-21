@@ -603,6 +603,8 @@ video {
         padding: 2rem;
         border-radius: 10px;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.01);
+        z-index: 100;
+
     }
     .nav-list li a {
         text-decoration: none;
@@ -625,6 +627,9 @@ video {
     }
     .nav-list li a:hover {
         color: #FEF4EB;
+    }
+    .videointro .video-container {
+        position: relative;
     }
     footer .container {
         display: flex;
