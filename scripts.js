@@ -1,6 +1,7 @@
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
+const enlacesCerrarMenu = document.querySelectorAll(".nav-list li a");
 
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
@@ -9,6 +10,13 @@ abrir.addEventListener("click", () => {
 cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
 });
+
+enlacesCerrarMenu.forEach(enlace => {
+    enlace.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    });
+});
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
