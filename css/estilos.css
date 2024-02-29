@@ -56,7 +56,8 @@ header .logo {
 .bloque .texto-bloque2,
 .bloque .texto-bloque3,
 .bloque .texto-bloque4, 
-.disciplinas {
+.disciplinas,
+.aviso-legal {
     width: 85%;
     justify-content: center;
     align-items: center;
@@ -65,17 +66,20 @@ header .logo {
 .bloque .texto-bloque1 h1,
 .bloque .texto-bloque2 h1,
 .bloque .texto-bloque3 h1,
-.bloque .texto-bloque4 h1 {
+.bloque .texto-bloque4 h1,
+.aviso-legal h1 {
     font-size: 2rem;
     color: #00436A;
     font-weight: 700;
     padding: 20px;
 }
-.bloque .texto-bloque2 h2, 
-.disciplinas .disciplina .texto-disciplina h2 {
+.bloque .texto-bloque2 h2,
+.bloque .texto-bloque1 h2, 
+.disciplinas .disciplina .texto-disciplina h2, 
+.aviso-legal h2 {
     font-size: 2rem;
     color: #00436A;
-    margin: 30px;
+    margin: 20px;
 }
 
 /****INDEX******/
@@ -105,14 +109,16 @@ header .logo {
 }
 
 .bloque .parallax a:hover,
-.bloque .parallax a:hover {
+.bloque .parallax a:hover,
+.aviso-legal a:hover {
     color: #FEF4EB;
 }
 
 .bloque .texto-bloque1 p,
 .bloque .texto-bloque2 p,
 .bloque .texto-bloque3 p, 
-.disciplinas .disciplina .texto-disciplina p {
+.disciplinas .disciplina .texto-disciplina p,
+.aviso-legal p {
     font-size: 1rem;
     text-align: start;
     line-height: 2.5rem;
@@ -367,47 +373,41 @@ footer {
 
 footer .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;    
     align-items: center;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos móviles */
     padding-left: 30px;
     padding-right: 30px;
+    width: 65%;
+    margin: auto;
 }
-
-footer .container {
-    justify-content: space-between; /* Mantiene el espacio entre los elementos */
-    }
 
 footer .container .bloqueFooter2 {
     display: flex;
-    justify-content: flex-end; /* Coloca los logos de RRSS al borde derecho */
-    align-items: center; /* Alinea verticalmente los elementos en el bloqueFooter2 */
-    flex-direction: column; /* Cambia la dirección a columna para pantallas grandes */
-    margin-left: auto; /* Mueve el bloqueFooter2 hacia la derecha */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     }
 
-    footer .container .bloqueFooter2 ul {
+footer .container .bloqueFooter2 ul {
     list-style: none;
     margin: 0; /* Elimina el margen predeterminado */
     padding: 10px; /* Elimina el relleno predeterminado */
     display: flex;
-    justify-content: flex-end; /* Alinea la lista de RRSS a la derecha */
+    justify-content: center; 
     }
 
-    footer .container .bloqueFooter2 .politicas li {
+footer .container .bloqueFooter2 .politicas li {
     text-align: center;
     padding: 5px;
     }
 
-    footer .container .bloqueFooter2 {
-        padding-bottom: 20px;
-    }
-    footer a {
+footer a {
         text-decoration: none;
         color: #00436A;
         font-size: 1rem;
     }
-    footer a:hover {
+footer a:hover {
         color: #FEF4EB;
     }
     
@@ -421,9 +421,31 @@ footer .container .bloqueFooter1 img {
     width: auto;
 }
 
+/*********AVISO LEGAL*************/
+.bloqueFooterlegal{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.bloqueFooterlegal ul{
+    list-style: none;
+}
+.aviso-legal ul {
+    width: 85%;
+    margin: auto;
+}
 
+.aviso-legal h3 {
+    color: #00436A;
+    padding: 10px;
+    font-size: larger;
+}
+
+.aviso-legal ol {
+    margin-bottom: 50px;
+}
 /*************************
-FOOTER RRSS y Políticas
+FOOTER RRSS
 *************************/
 footer .container .bloqueFooter2 {
     align-items: flex-end;
@@ -450,6 +472,7 @@ footer .container .bloqueFooter2 ul li img {
 }
 
 
+
 /*************************El equpo*************************/
 .imagen-seccion {
     width: 85%;
@@ -458,14 +481,28 @@ footer .container .bloqueFooter2 ul li img {
     margin: auto;
 }
 .imagen-seccion img {
-    width: 85%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;    
     border-radius: 25px;
-
+    margin-bottom: 20px;
 }
+.video-container {
+    min-height: 65vh;
+    position: relative;
+}
+video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    background-position: top;
+    left: 0;
+}
+
 /*************************El Centro*************************/
 .carrousel {
     width: 85%;
@@ -530,21 +567,6 @@ footer .container .bloqueFooter2 ul li img {
     background-color:#ffa707;
 }
 
-/********QUIENES SOMOS********/
-.video-container {
-    min-height: 65vh;
-    position: relative;
-}
-video {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    background-position: top;
-    left: 0;
-}
-
 /********DISCIPLINAS********/
 .disciplinas .disciplina {
     display: flex;
@@ -564,6 +586,14 @@ video {
 .disciplina:nth-child(2) .texto-disciplina {
     order: 1;
 }
+
+/********ACTIVIDADES************/
+.bloque .texto-bloque1 ul {
+    margin: auto;
+    width: 85%;
+    padding-bottom: 20px;
+}
+
 
 /**************DISEÑO RESPONSIVE**************/
 /* Estilos para pantallas pequeñas */
@@ -639,8 +669,15 @@ video {
         flex-direction: column;
         align-items: center;
     }
+    .bloqueFooter1 {
+        width: fit-content;
+    }
     .bloqueFooter1 .logo {
         padding-right: 30px;
+    }
+    .bloqueFooter1 img {
+        width: 150px;
+        height: 150px;
     }
     .bloqueFooter1,
     .bloqueFooter2 {
@@ -660,8 +697,12 @@ video {
     footer .container {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
-
+    footer .container .bloqueFooterlegal {
+        text-align: center;
+        align-items: center;
+    }
     footer .container .bloqueFooter2 ul {
         display: flex;
         justify-content: center;
@@ -674,7 +715,9 @@ video {
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
+        margin-top: 20px;
     }
+
     footer .container .bloqueFooter2 .politicas {
         display: flex;
         flex-direction: column;
