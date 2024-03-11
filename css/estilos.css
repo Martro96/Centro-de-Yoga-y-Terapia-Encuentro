@@ -20,8 +20,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffa707;/*#E9A529; #E99245 estos dos primeros son los de la guía, este #ffa707 es el que me saca el pincel al pulsar sobre el logo*/
-    /*background-color: #FEF4EB;*/
+    background-color: #ffa707;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -67,19 +66,47 @@ header .logo {
 .bloque .texto-bloque2 h1,
 .bloque .texto-bloque3 h1,
 .bloque .texto-bloque4 h1,
-.aviso-legal h1 {
+.aviso-legal h1, 
+.bloque-actividades h1 {
     font-size: 2rem;
     color: #00436A;
     font-weight: 700;
     padding: 20px;
 }
-.bloque .texto-bloque2 h2,
-.bloque .texto-bloque1 h2, 
+.bloque .texto-bloque2 h2, 
 .disciplinas .disciplina .texto-disciplina h2, 
-.aviso-legal h2 {
+.aviso-legal h2, 
+.equipo h2 {
     font-size: 2rem;
     color: #00436A;
     margin: 20px;
+    padding: 20px;
+}
+.bloque .texto-bloque1 h2 {
+    font-size: 2rem;
+    color: #00436A;
+    margin: 20px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.bloque .equipo h3 {
+    font-size: 1.5rem;
+    color: #00436A;
+    margin: 20px;
+}
+
+.bloque .texto-bloque1 p,
+.bloque .texto-bloque2 p,
+.bloque .texto-bloque3 p, 
+.disciplinas .disciplina .texto-disciplina p,
+.aviso-legal p, 
+.bloque .equipo p, 
+.bloque-actividades p {
+    font-size: 1rem;
+    text-align: start;
+    line-height: 2.5rem;
+    padding: 10px 20px;
 }
 
 /****INDEX******/
@@ -114,16 +141,6 @@ header .logo {
     color: #FEF4EB;
 }
 
-.bloque .texto-bloque1 p,
-.bloque .texto-bloque2 p,
-.bloque .texto-bloque3 p, 
-.disciplinas .disciplina .texto-disciplina p,
-.aviso-legal p {
-    font-size: 1rem;
-    text-align: start;
-    line-height: 2.5rem;
-    padding: 10px 20px;
-}
 
 /*****EFECTO CARD  HOVER*******/
 .wrapper {
@@ -167,7 +184,6 @@ header .logo {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 68, 107, 0.781), rgba(241, 97, 14, 0.589));
-    /*background-image: url(../pablitomotosyoga.jpg);*/
     background-position: center;
     z-index: 2;
     transition: 0.5s all;
@@ -180,7 +196,7 @@ header .logo {
 
 .card .info {
     position: absolute;
-    bottom: 0; /* Ajusta la posición del texto y el botón */
+    bottom: 0; /* Ajusta la posición del y el botón */
     left: 0; /* Ajusta la posición del texto y el botón */
     right: 0; /* Ajusta la posición del texto y el botón */
     z-index: 3;
@@ -471,9 +487,25 @@ footer .container .bloqueFooter2 ul li img {
 
 }
 
+/*****************************NOSOTRAS**************************/
+.equipo .profesora {
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    flex-direction: row; /* Alinear elementos en una fila */
+    align-items:start; /* Alinear verticalmente */
+}
+.foto-profe img {
+    width: 275px;
+    height: auto;
+    display: flex;
+    border-radius: 25px;
+}
+.profesora:nth-child(2) .foto-profe {
+    order: -1; /* Cambiar el orden de la foto de María José Zamora */
+}
 
-
-/*************************El equpo*************************/
+/*************************VÍDEO INTRO*************************/
 .imagen-seccion {
     width: 85%;
     justify-content: center;
@@ -588,10 +620,18 @@ video {
 }
 
 /********ACTIVIDADES************/
-.bloque .texto-bloque1 ul {
+.bloque-actividades {
     margin: auto;
     width: 85%;
     padding-bottom: 20px;
+}
+.bloque-actividades .seminarios h2,
+.bloque-actividades .taller h2, 
+.bloque-actividades .actividades h2 {
+    font-size: 1.7rem;
+    color: #00436A;
+    margin: 20px;
+    font-weight: 500;
 }
 
 
@@ -862,5 +902,24 @@ video {
     
     .disciplina:nth-child(2) .texto-disciplina {
         order: 2;
+    }
+    .equipo .profesora {
+        display: flex;
+        flex-direction: column;
+    }
+    .foto-profe img {
+        width: 80%;
+        margin: auto;
+    }
+    .bloque .texto-bloque1 h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+        font-weight: bold;
+    }
+    .bloque .equipo h3 {
+        font-size: 1.3rem;
+    }
+    .profesora:nth-child(2) .foto-profe {
+        order: 1; /* Cambiar el orden de la foto de María José Zamora */
     }
 }
