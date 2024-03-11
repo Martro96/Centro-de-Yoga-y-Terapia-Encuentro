@@ -627,13 +627,52 @@ video {
 }
 .bloque-actividades .seminarios h2,
 .bloque-actividades .taller h2, 
-.bloque-actividades .actividades h2 {
+.bloque-actividades h2 {
     font-size: 1.7rem;
     color: #00436A;
-    margin: 20px;
-    font-weight: 500;
+    font-weight: 600;
+    padding: 20px;
 }
+.talleres h3 {
+    font-size: 1.3rem;
+    color: #00436A;
+    font-weight: 500;
+    padding-bottom: 20px;
 
+}
+.bloque-actividades img {
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.bloque-actividades .seminarios .fotos img {
+    width:100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+.bloque-actividades .taller .fotos img {
+    width: 100%;
+}
+.talleres {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    gap: 10px;
+    padding: 20px;
+    align-items: start;
+    justify-content:center;
+    text-align: center;
+}
+.bloque-actividades .actividades ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 30px;
+}
 
 /**************DISEÑO RESPONSIVE**************/
 /* Estilos para pantallas pequeñas */
@@ -922,4 +961,8 @@ video {
     .profesora:nth-child(2) .foto-profe {
         order: 1; /* Cambiar el orden de la foto de María José Zamora */
     }
+    .talleres {
+        display: flex;
+        flex-direction: column;
+}
 }
